@@ -1,0 +1,23 @@
+[project]
+name = "football-match-mcp"
+version = "2.0.0"
+description = "Football Match MCP Server with authentication and versioning"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-adk>=2.3.0",
+    "httpx>=0.28.1",
+    "litellm>=1.75.0",
+    "mcp[cli]>=1.28.1,<2",
+    "python-dotenv>=1.1.1",
+    "tzdata>=2025.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
